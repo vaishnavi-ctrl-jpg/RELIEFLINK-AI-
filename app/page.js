@@ -6,6 +6,7 @@ import Image from 'next/image';
 export default function Dashboard() {
   const [requests, setRequests] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [aiInsight, setAiInsight] = useState({ insight: 'Optimizing...', recommendation: 'Analyzing...' });
 
   useEffect(() => {
     fetch('/api/request')
@@ -18,13 +19,18 @@ export default function Dashboard() {
         console.error(e);
         setLoading(false);
       });
+
+    fetch('/api/intelligence')
+      .then(res => res.json())
+      .then(data => setAiInsight(data))
+      .catch(e => console.error(e));
   }, []);
 
   const stats = [
     { title: 'Major Incidents', value: '3', trend: 'High Urgency', color: 'pill-critical' },
     { title: 'Pending Assistance', value: '12', trend: 'Medium', color: 'pill-warning' },
     { title: 'Monitoring', value: '25', trend: 'Low', color: 'pill-info' },
-    { title: 'AI Predictions', value: 'Active', trend: 'Optimizing...', color: 'pill-info', isAI: true }
+    { title: 'AI Predictions', value: aiInsight.insight, trend: 'ACTIVE', color: 'pill-info', isAI: true }
   ];
 
   if (loading) return <div style={{ padding: '2rem' }}>Loading ReliefLink AI...</div>;

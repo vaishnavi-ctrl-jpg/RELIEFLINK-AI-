@@ -8,11 +8,17 @@ export default function MapPage() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [isRecentering, setIsRecentering] = useState(false);
   const [selectedIncident, setSelectedIncident] = useState(null);
+  const [aiInsight, setAiInsight] = useState('Analyzing situational data...');
 
   useEffect(() => {
     fetch('/api/request')
       .then(res => res.json())
       .then(data => setIncidents(data))
+      .catch(e => console.error(e));
+
+    fetch('/api/intelligence')
+      .then(res => res.json())
+      .then(data => setAiInsight(data.insight))
       .catch(e => console.error(e));
   }, []);
 
@@ -95,7 +101,7 @@ export default function MapPage() {
           <div style={{ marginTop: '1.5rem', borderTop: '1px solid var(--border-subtle)', paddingTop: '1rem' }}>
             <p style={{ fontSize: '0.7rem', color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>AI INSIGHT</p>
             <div className="incident-pill pill-info" style={{ fontSize: '0.7rem', padding: '0.4rem' }}>
-              High demand predicted in Sector 7
+              {aiInsight}
             </div>
           </div>
           

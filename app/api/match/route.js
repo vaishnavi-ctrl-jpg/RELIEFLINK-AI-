@@ -1,59 +1,67 @@
 import { NextResponse } from 'next/server';
 import { updateRequest, volunteers } from '../../../lib/store';
-import { GoogleGenAI } from '@google/genai';
+import { VertexAI } from '@google-cloud/vertexai';
+
+// Initialize Vertex AI with environment variables
+const project = process.env.GOOGLE_CLOUD_PROJECT || 'prompt-wars-2-494622';
+const location = process.env.GOOGLE_CLOUD_LOCATION || 'us-central1';
+
+const vertexAI = new VertexAI({ project, location });
+const generativeModel = vertexAI.getGenerativeModel({
+  model: 'gemini-1.5-flash',
+});
 
 export async function POST(req) {
   try {
-    const { requestId, title, description, location, category } = await req.json();
+    const { requestId, title, description, location: incidentLocation, category } = await req.json();
     
-    // Check if API key is configured
-    if (!process.env.GEMINI_API_KEY) {
-      console.warn('GEMINI_API_KEY is not set. Using mocked AI response.');
-      // Mock logic
+    // Fallback if credentials might be missing in some environments
+    if (!process.env.GOOGLE_APPLICATION_CREDENTIALS) {
+      console.warn('GOOGLE_APPLICATION_CREDENTIALS not set. Using mocked strategy.');
       const priority = category === 'Medical' || category === 'Fire' ? 'High' : 'Medium';
       const bestMatch = volunteers.find(v => v.skills.includes(category)) || volunteers[0];
-      
-      const updatedMock = updateRequest(requestId, {
+      return NextResponse.json(updateRequest(requestId, {
         status: 'Assigned',
         priority,
         assignedVolunteerId: bestMatch.id,
-        explanation: `[MOCKED] Assigned ${bestMatch.name} because they have ${category} expertise and are located in ${bestMatch.location}, and the request is ${priority} urgency.`
-      });
-      return NextResponse.json(updatedMock);
+        explanation: `[MOCKED] ${bestMatch.name} assigned based on ${category} expertise.`
+      }));
     }
 
-    const ai = new GoogleGenAI();
-    
     const prompt = `
-You are an intelligent disaster relief matching system.
-Analyze the following request and assign a priority level (High, Medium, Low).
-Then, look at the available volunteers and pick the BEST match based on skill relevance and proximity.
-Generate a clear, one-sentence explanation for the match like "Assigned Aisha because she has medical expertise, is located nearby, and the request is high urgency."
+You are the ReliefLink AI Advanced Dispatch Engine. 
+Analyze this disaster relief request and find the optimal volunteer from the provided list.
+Prioritize specialized skills (e.g., Medical skill for Medical category) and proximity.
 
-Request Details:
-Title: ${title}
-Description: ${description}
-Location: ${location}
-Category: ${category}
+Request:
+- Title: ${title}
+- Type: ${category}
+- Description: ${description}
+- Location: ${incidentLocation}
 
 Available Volunteers:
 ${JSON.stringify(volunteers)}
 
-Output your answer as a JSON object with exactly these fields:
-- priority (String: "High", "Medium", "Low")
-- volunteerId (String: ID of the selected volunteer)
-- explanation (String)
+Output a JSON object:
+{
+  "priority": "High" | "Medium" | "Low",
+  "volunteerId": "ID_OF_VOLUNTEER",
+  "explanation": "Brief tactical reason for this match."
+}
 `;
 
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
-      contents: prompt,
-      config: {
-        responseMimeType: 'application/json',
+    const request = {
+      contents: [{ role: 'user', parts: [{ text: prompt }] }],
+      generationConfig: {
+        response_mime_type: 'application/json',
       }
-    });
+    };
 
-    const aiResult = JSON.parse(response.text);
+    const streamingResp = await generativeModel.generateContent(request);
+    const response = await streamingResp.response;
+    const fullText = response.candidates[0].content.parts[0].text;
+    
+    const aiResult = JSON.parse(fullText);
     
     const updated = updateRequest(requestId, {
       status: 'Assigned',
@@ -64,7 +72,7 @@ Output your answer as a JSON object with exactly these fields:
 
     return NextResponse.json(updated);
   } catch (error) {
-    console.error('Match error:', error);
-    return NextResponse.json({ error: 'Failed to process match' }, { status: 500 });
+    console.error('Vertex AI Match error:', error);
+    return NextResponse.json({ error: 'Failed to process match with Vertex AI' }, { status: 500 });
   }
 }
