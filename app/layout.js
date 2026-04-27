@@ -7,8 +7,8 @@ export const metadata = {
 };
 
 import { ToastProvider } from './components/ToastProvider';
-
 import Image from 'next/image';
+import Sidebar from './components/Sidebar';
 
 export default function RootLayout({ children }) {
   return (
@@ -16,27 +16,7 @@ export default function RootLayout({ children }) {
       <body>
         <ToastProvider>
           <div className="layout-shell">
-            <aside className="sidebar">
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem', flexShrink: 0 }}>
-                <div style={{ width: '32px', height: '32px', background: 'var(--accent-primary)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: 'white', fontWeight: 'bold' }}>R</span>
-                </div>
-                <h2 style={{ fontSize: '1.25rem', fontWeight: 700 }}>ReliefLink <span style={{ color: 'var(--accent-primary)' }}>AI</span></h2>
-              </div>
-
-              <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', flex: 1 }}>
-                <Link href="/" className="nav-item active"><span>📊</span> Dashboard</Link>
-                <Link href="/incidents" className="nav-item"><span>⚠️</span> Active Incidents</Link>
-                <Link href="/map" className="nav-item"><span>🗺️</span> Resource Map</Link>
-                <Link href="/volunteers" className="nav-item"><span>👥</span> Volunteers</Link>
-                <Link href="/analytics" className="nav-item"><span>📈</span> Analytics</Link>
-                <Link href="/settings" className="nav-item"><span>⚙️</span> Settings</Link>
-              </nav>
-              
-              <div style={{ marginTop: 'auto', paddingTop: '1rem', borderTop: '1px solid var(--border-subtle)' }}>
-                <Link href="/help" className="nav-item"><span>❓</span> Help Center</Link>
-              </div>
-            </aside>
+            <Sidebar />
 
             <main className="main-content">
               <header className="top-header">
