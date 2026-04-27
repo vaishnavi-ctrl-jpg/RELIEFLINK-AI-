@@ -156,7 +156,7 @@ export default function Dashboard() {
                     </td>
                     <td style={{ padding: '0.5rem 0', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                       <div style={{ width: '18px', height: '18px', borderRadius: '50%', background: '#e2e8f0', overflow: 'hidden' }}>
-                        <img src="/placeholder_avatar.png" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <img src="/images/adminstrator.jpeg" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                       </div>
                       <span style={{ fontSize: '0.75rem' }}>Jane Doe</span>
                     </td>

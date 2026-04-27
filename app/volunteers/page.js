@@ -55,7 +55,11 @@ export default function VolunteersList() {
             <div key={vol.id} className="bento-card" style={{ padding: '1.25rem', gap: '1rem' }}>
               <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                 <div style={{ width: '56px', height: '56px', borderRadius: '12px', background: '#f1f5f9', overflow: 'hidden', border: '1px solid var(--border-subtle)', flexShrink: 0 }}>
-                  <img src="/placeholder_avatar.png" alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img 
+                    src={`/images/voluntreer ${(i % 6) + 1}.jpeg`} 
+                    alt="Profile" 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                  />
                 </div>
                 <div style={{ minWidth: 0 }}>
                   <h3 style={{ fontSize: '0.95rem', fontWeight: 700, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{vol.name}</h3>

@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
                 <span style={{ fontSize: '1.25rem', cursor: 'pointer' }}>🔔</span>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <div style={{ width: '36px', height: '36px', borderRadius: '50%', background: '#e2e8f0', overflow: 'hidden' }}>
-                    <img src="/placeholder_avatar.png" alt="User" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src="/images/adminstrator.jpeg" alt="User" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <div>
                     <p style={{ fontSize: '0.9rem', fontWeight: 600 }}>Jane Doe</p>
