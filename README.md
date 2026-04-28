@@ -58,24 +58,29 @@
 
 <div align="center">
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│                     🛰️  COMMAND CENTER HUD                      │
-├────────────────────────────┬─────────────────────────────────────┤
-│  📡 ELITE GIS MAP          │  🧠 VERTEX AI ENGINE               │
-│  ─────────────────────────  │  ──────────────────────────────── │
-│  • Tactical coordinate grid │  • Predictive hotspot forecasting │
-│  • Satellite radar sweep    │  • Semantic skill matching        │
-│  • Pulsing crisis heat zones│  • Autonomous volunteer dispatch  │
-│  • Interactive intel cards  │  • Real-time demand analysis      │
-├────────────────────────────┼─────────────────────────────────────┤
-│  💎 PREMIUM UX              │  👥 COORDINATION SUITE            │
-│  ─────────────────────────  │  ──────────────────────────────── │
-│  • Glassmorphic panels      │  • Deep volunteer profiles        │
-│  • Indigo brand gradients   │  • Integrated tactical chat       │
-│  • Shimmer skeleton loaders │  • Incident tracking & mgmt       │
-│  • Toast notification system│  • Performance analytics          │
-└────────────────────────────┴─────────────────────────────────────┘
+```mermaid
+mindmap
+  root((🛰️ Command Center HUD))
+    (📡 Elite GIS Map)
+      Tactical coordinate grid
+      Satellite radar sweep
+      Pulsing crisis heat zones
+      Interactive intel cards
+    (🧠 Vertex AI Engine)
+      Predictive hotspot forecasting
+      Semantic skill matching
+      Autonomous volunteer dispatch
+      Real-time demand analysis
+    (💎 Premium UX)
+      Glassmorphic panels
+      Indigo brand gradients
+      Shimmer skeleton loaders
+      Toast notification system
+    (👥 Coordination Suite)
+      Deep volunteer profiles
+      Integrated tactical chat
+      Incident tracking & mgmt
+      Performance analytics
 ```
 
 </div>
@@ -86,41 +91,23 @@
 
 <div align="center">
 
-```
-                    ┌─────────────────────┐
-                    │   🚨 INCIDENT IN    │
-                    │      SECTOR 7       │
-                    └────────┬────────────┘
-                             │
-                             ▼
-                  ┌──────────────────────┐
-                  │   RELIEFLINK API     │
-                  │   ──────────────     │
-                  │  /api/match          │
-                  │  /api/intelligence   │
-                  └────────┬─────────────┘
-                           │
-                           ▼
-              ┌────────────────────────────┐
-              │  ☁️  GOOGLE CLOUD VERTEX AI │
-              │  ────────────────────────  │
-              │   Model: Gemini 1.5 Flash  │
-              │   SDK: @google-cloud/      │
-              │        vertexai            │
-              └──────┬───────────┬─────────┘
-                     │           │
-            ┌────────▼──┐  ┌────▼──────────┐
-            │ 🔮 PREDICT │  │ ⚡ DISPATCH    │
-            │  Hotspot   │  │  Best-match   │
-            │  Analysis  │  │  Volunteer    │
-            └────────┬──┘  └────┬──────────┘
-                     │          │
-                     ▼          ▼
-              ┌─────────────────────────┐
-              │  📊 COMMAND CENTER HUD  │
-              │  ─────────────────────  │
-              │  Dashboard • Map • Feed │
-              └─────────────────────────┘
+```mermaid
+graph TD
+    %% Styling
+    classDef default fill:#1E293B,stroke:#38BDF8,stroke-width:2px,color:#fff,rx:8px,ry:8px
+    classDef ai fill:#312E81,stroke:#8B5CF6,stroke-width:2px,color:#fff,rx:8px,ry:8px
+    classDef action fill:#065F46,stroke:#10B981,stroke-width:2px,color:#fff,rx:8px,ry:8px
+    classDef ui fill:#0F172A,stroke:#6366F1,stroke-width:2px,color:#fff,rx:8px,ry:8px
+    classDef incoming fill:#7F1D1D,stroke:#EF4444,stroke-width:2px,color:#fff,rx:8px,ry:8px
+
+    %% Nodes
+    A[🚨 Incident Trigger in Sector 7]:::incoming --> B[ReliefLink API Layer<br/>/api/match & /api/intelligence]
+    B --> C{☁️ Google Cloud Vertex AI<br/>Gemini 1.5 Flash SDK}:::ai
+    C --> D[🔮 Predictive Hotspot Analysis]:::ai
+    C --> E[⚡ Semantic Volunteer Dispatch]:::ai
+    D --> F[📊 Command Center HUD<br/>Dashboard • Map • Feed]:::ui
+    E --> F
+    E --> G[🚀 Field Responder Deployed]:::action
 ```
 
 </div>
