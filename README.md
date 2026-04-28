@@ -1,193 +1,224 @@
 <div align="center">
 
-# 🛰️ ReliefLink AI
+<img src="hero-banner.png" alt="ReliefLink AI" width="100%" />
 
-![ReliefLink AI Hero Banner](hero-banner.png)
+<br/>
 
-### **Autonomous Crisis Coordination Command Center**
+# 🛰️ R E L I E F L I N K &nbsp; A I
+
+### ⚡ Autonomous Crisis Coordination Command Center ⚡
+
+<br/>
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.2.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![Vertex AI](https://img.shields.io/badge/Vertex_AI-Gemini_1.5-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/vertex-ai)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![CSS](https://img.shields.io/badge/Glassmorphism-CSS-blueviolet?style=for-the-badge&logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![SDG 11](https://img.shields.io/badge/UN_SDG-11-F5A623?style=for-the-badge)](https://sdgs.un.org/goals/goal11)
+[![SDG 13](https://img.shields.io/badge/UN_SDG-13-48773E?style=for-the-badge)](https://sdgs.un.org/goals/goal13)
 
-**Scaling Global Disaster Response with Google Cloud Vertex AI**
+<br/>
 
-[🚀 Live Demo](#) · [📹 Watch Video](#) · [📖 Documentation](#-architecture)
+*Scaling global disaster response with predictive intelligence.*  
+*Built for the **Google Solution Challenge 2026**.*
+
+<br/>
+
+[🚀 Live Demo](#-quick-start) &nbsp;•&nbsp; [📹 Watch Video](#) &nbsp;•&nbsp; [📖 Docs](#-architecture) &nbsp;•&nbsp; [🐛 Report Bug](https://github.com/vaishnavi-ctrl-jpg/RELIEFLINK-AI-/issues)
+
+---
 
 </div>
 
----
+<br/>
 
-> **ReliefLink AI** transforms disaster management from *reactive* to *predictive*.  
-> By leveraging **Google Cloud Vertex AI (Gemini 1.5 Flash)**, it autonomously coordinates field intelligence, dispatches responders, and forecasts crisis hotspots — all from a single tactical command center.
+## 💡 The Problem
 
----
+> **70% of disaster response delays stem from coordination gaps.**  
+> When a crisis strikes, fragmented tools, slow dispatching, and zero predictive intelligence cost precious time — and lives.
+
+**ReliefLink AI** solves this by centralizing disaster intelligence into a single, AI-powered Command Center that doesn't just *react* — it **predicts**.
+
+<br/>
 
 ## 🌍 UN Sustainable Development Goals
 
-<table>
-<tr>
-<td width="80" align="center">🏙️</td>
-<td><strong>SDG 11 — Sustainable Cities & Communities</strong><br/>Enhancing disaster resilience and protecting the most vulnerable populations through intelligent resource allocation.</td>
-</tr>
-<tr>
-<td width="80" align="center">🌿</td>
-<td><strong>SDG 13 — Climate Action</strong><br/>Strengthening adaptive capacity to climate-related hazards and natural disasters with predictive AI.</td>
-</tr>
-</table>
+<div align="center">
 
----
+| | Goal | How ReliefLink Contributes |
+|:---:|:---|:---|
+| 🏙️ | **SDG 11 — Sustainable Cities** | Intelligent resource allocation to protect vulnerable populations during urban crises |
+| 🌿 | **SDG 13 — Climate Action** | Predictive AI to strengthen adaptive capacity against climate-related disasters |
 
-## ✨ Key Features
+</div>
 
-<table>
-<tr>
-<td width="50%" valign="top">
+<br/>
 
-### 📡 Elite GIS Situational Awareness
-- 🎯 Tactical coordinate grid (50px precision)
-- 📡 Satellite radar sweep animation
-- 🔥 Pulsing crisis heat zones
-- 🗺️ Interactive Target Intel cards
+## ✨ Feature Highlights
 
-</td>
-<td width="50%" valign="top">
+<div align="center">
 
-### 🧠 Strategic Intelligence Engine
-- 🔮 Predictive hotspot forecasting via **Vertex AI**
-- ⚡ Autonomous volunteer dispatch
-- 📊 Semantic skill-to-incident matching
-- 📈 Real-time situational analysis
+```
+┌──────────────────────────────────────────────────────────────────┐
+│                     🛰️  COMMAND CENTER HUD                      │
+├────────────────────────────┬─────────────────────────────────────┤
+│  📡 ELITE GIS MAP          │  🧠 VERTEX AI ENGINE               │
+│  ─────────────────────────  │  ──────────────────────────────── │
+│  • Tactical coordinate grid │  • Predictive hotspot forecasting │
+│  • Satellite radar sweep    │  • Semantic skill matching        │
+│  • Pulsing crisis heat zones│  • Autonomous volunteer dispatch  │
+│  • Interactive intel cards  │  • Real-time demand analysis      │
+├────────────────────────────┼─────────────────────────────────────┤
+│  💎 PREMIUM UX              │  👥 COORDINATION SUITE            │
+│  ─────────────────────────  │  ──────────────────────────────── │
+│  • Glassmorphic panels      │  • Deep volunteer profiles        │
+│  • Indigo brand gradients   │  • Integrated tactical chat       │
+│  • Shimmer skeleton loaders │  • Incident tracking & mgmt       │
+│  • Toast notification system│  • Performance analytics          │
+└────────────────────────────┴─────────────────────────────────────┘
+```
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+</div>
 
-### 💎 Premium UX Design
-- 🧊 Glassmorphic panels (25px backdrop blur)
-- ✨ Indigo-to-Cyan brand gradients
-- ⚡ Shimmer skeleton loading states
-- 🔔 Toast notification feedback system
+<br/>
 
-</td>
-<td width="50%" valign="top">
+## 🧠 Powered by Google Cloud
 
-### 👥 Coordination Suite
-- 👤 Deep volunteer profiles & deployment
-- 💬 Integrated glassmorphic chat
-- 📋 Incident tracking & management
-- 📊 Analytics & performance dashboards
+<div align="center">
 
-</td>
-</tr>
-</table>
+```
+                    ┌─────────────────────┐
+                    │   🚨 INCIDENT IN    │
+                    │      SECTOR 7       │
+                    └────────┬────────────┘
+                             │
+                             ▼
+                  ┌──────────────────────┐
+                  │   RELIEFLINK API     │
+                  │   ──────────────     │
+                  │  /api/match          │
+                  │  /api/intelligence   │
+                  └────────┬─────────────┘
+                           │
+                           ▼
+              ┌────────────────────────────┐
+              │  ☁️  GOOGLE CLOUD VERTEX AI │
+              │  ────────────────────────  │
+              │   Model: Gemini 1.5 Flash  │
+              │   SDK: @google-cloud/      │
+              │        vertexai            │
+              └──────┬───────────┬─────────┘
+                     │           │
+            ┌────────▼──┐  ┌────▼──────────┐
+            │ 🔮 PREDICT │  │ ⚡ DISPATCH    │
+            │  Hotspot   │  │  Best-match   │
+            │  Analysis  │  │  Volunteer    │
+            └────────┬──┘  └────┬──────────┘
+                     │          │
+                     ▼          ▼
+              ┌─────────────────────────┐
+              │  📊 COMMAND CENTER HUD  │
+              │  ─────────────────────  │
+              │  Dashboard • Map • Feed │
+              └─────────────────────────┘
+```
 
----
+</div>
+
+<br/>
 
 ## 🛠️ Tech Stack
 
-| Layer | Technology |
-|:---|:---|
-| **Framework** | Next.js 16.2.3 (React 19) |
-| **AI Engine** | Google Cloud Vertex AI — Gemini 1.5 Flash |
-| **Styling** | Vanilla CSS — Glassmorphism + Outfit Typography |
-| **State** | React Hooks + Server-side API Routes |
-| **Auth** | GCP Service Account (JSON Key) |
+<div align="center">
 
----
+| Layer | Technology | Purpose |
+|:---:|:---|:---|
+| ⚙️ | **Next.js 16.2.3** | Server-side rendering & API routes |
+| 🧠 | **Vertex AI (Gemini 1.5 Flash)** | Predictive analytics & semantic matching |
+| ⚛️ | **React 19** | Component-driven UI architecture |
+| 🎨 | **Vanilla CSS** | Glassmorphism, gradients & animations |
+| 🔤 | **Outfit** | Premium geometric typography |
+| 🔐 | **GCP Service Account** | Enterprise-grade authentication |
 
-## 🏗️ Architecture
+</div>
 
-```mermaid
-graph TD
-    A[🚨 Disaster Incident] --> B[ReliefLink API Layer]
-    B --> C{🧠 Vertex AI Engine}
-    C --> D[📡 Hotspot Prediction]
-    C --> E[⚡ Semantic Volunteer Match]
-    D --> F[📊 Dashboard HUD]
-    E --> G[🚀 Automated Dispatch]
-    G --> H[👤 Field Responder]
-    F --> I[🗺️ GIS Map Intel]
-```
-
----
+<br/>
 
 ## 🚦 Quick Start
 
-### Prerequisites
-- **Node.js** 18+
-- A **Google Cloud Project** with [Vertex AI API](https://console.cloud.google.com/apis/library/aiplatform.googleapis.com) enabled
-
-### Installation
-
 ```bash
-# Clone the repository
+# 1️⃣  Clone
 git clone https://github.com/vaishnavi-ctrl-jpg/RELIEFLINK-AI-
 cd RELIEFLINK-AI-
 
-# Install dependencies
+# 2️⃣  Install
 npm install
-```
 
-### Environment Setup
-
-Create a `.env.local` file in the project root:
-
-```env
+# 3️⃣  Configure (.env.local)
 GOOGLE_CLOUD_PROJECT=your-project-id
 GOOGLE_CLOUD_LOCATION=us-central1
 GOOGLE_APPLICATION_CREDENTIALS=./service-account-key.json
-```
 
-> 💡 **Need a Service Account?** Go to [IAM & Admin → Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts), create one with the **Vertex AI User** role, and download the JSON key.
-
-### Launch
-
-```bash
+# 4️⃣  Launch
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to access the Command Center.
+> 💡 **Need a Service Account key?**  
+> [IAM Console](https://console.cloud.google.com/iam-admin/serviceaccounts) → Create Account → **Vertex AI User** role → Keys → JSON
 
----
+<br/>
 
 ## 📁 Project Structure
 
 ```
 relieflink-ai/
-├── app/
-│   ├── api/
-│   │   ├── match/          # Vertex AI Dispatch Engine
-│   │   ├── intelligence/   # Predictive Analytics API
-│   │   ├── request/        # Incident CRUD
-│   │   └── volunteers/     # Responder Network
-│   ├── components/
-│   │   └── Sidebar.js      # Glassmorphic Navigation HUD
-│   ├── map/                # Elite GIS Page
-│   ├── incidents/          # Crisis Management
-│   ├── volunteers/         # Responder Profiles
-│   ├── analytics/          # Performance Dashboards
-│   ├── settings/           # System Configuration
-│   └── help/               # Coordination Support Hub
-├── lib/
-│   └── store.js            # In-memory Data Layer
-└── public/                 # Static Assets & Profile Images
+│
+├── 📂 app/
+│   ├── 📂 api/
+│   │   ├── 🧠 match/            ← Vertex AI Dispatch Engine
+│   │   ├── 🔮 intelligence/     ← Predictive Analytics API
+│   │   ├── 📋 request/          ← Incident CRUD
+│   │   └── 👥 volunteers/       ← Responder Network API
+│   │
+│   ├── 📂 components/
+│   │   └── 🧭 Sidebar.js        ← Glassmorphic Navigation HUD
+│   │
+│   ├── 🗺️  map/                 ← Elite GIS Command Map
+│   ├── 🚨 incidents/            ← Crisis Management Console
+│   ├── 👥 volunteers/           ← Responder Directory
+│   ├── 📊 analytics/            ← Performance Dashboards
+│   ├── ⚙️  settings/            ← System Configuration
+│   ├── ❓ help/                  ← Support Hub
+│   ├── 🎨 globals.css           ← Indigo Design System
+│   └── 📄 page.js               ← Main Dashboard
+│
+├── 📂 lib/
+│   └── 💾 store.js              ← In-memory Data Layer
+│
+└── 📂 public/                   ← Static Assets & Profiles
 ```
 
----
+<br/>
 
 ## 🎖️ The Vision
 
-> *ReliefLink AI aims to be the open-source standard for crisis coordination — ensuring no call for help goes unanswered.*
+<div align="center">
+
+> *"In a crisis, every second counts.*  
+> *ReliefLink AI ensures no call for help goes unanswered."*
+
+<br/>
 
 ---
 
-<div align="center">
+**🏆 Developed for the Google Solution Challenge 2026 🏆**
 
-**Developed for the Google Solution Challenge 2026**
+Made with 💜 by [**Vaishnavi**](https://github.com/vaishnavi-ctrl-jpg)
 
-Made with 💜 by [Vaishnavi](https://github.com/vaishnavi-ctrl-jpg)
+<br/>
+
+<a href="https://github.com/vaishnavi-ctrl-jpg/RELIEFLINK-AI-">
+  <img src="https://img.shields.io/badge/⭐_Star_This_Repo-171515?style=for-the-badge&logo=github&logoColor=white" />
+</a>
 
 </div>
