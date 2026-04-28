@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="hero-banner.png" alt="ReliefLink AI" width="100%" />
+<img src="hero-banner.png" alt="ReliefLink AI" width="800" />
 
 <br/>
 
